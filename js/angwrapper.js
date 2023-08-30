@@ -9,10 +9,12 @@ function init()
     //Add angular root element
     div.innerHTML += '<app-root></app-root>'; 
 
+    var baseUrl = 'https://h2909571.stratoserver.net/HellebrekerPackages/2.-AgendaExternal/';
+
     //Load angular scripts
-    var runtimeUrl   = 'https://h2909571.stratoserver.net/HellebrekerPackages/Agenda/External/js/runtime.js';// Microsoft.Dynamics.NAV.GetImageResource('runtime.js');
-    var polyfillsUrl = 'https://h2909571.stratoserver.net/HellebrekerPackages/Agenda/External/js/polyfills.js';// Microsoft.Dynamics.NAV.GetImageResource('polyfills.js');
-    var mainUrl      = 'https://h2909571.stratoserver.net/HellebrekerPackages/Agenda/External/js/main.js';// Microsoft.Dynamics.NAV.GetImageResource('main.js');
+    var runtimeUrl   = baseUrl + 'js/runtime.js';// Microsoft.Dynamics.NAV.GetImageResource('runtime.js');
+    var polyfillsUrl = baseUrl + 'js/polyfills.js';// Microsoft.Dynamics.NAV.GetImageResource('polyfills.js');
+    var mainUrl      = baseUrl + 'js/main.js';// Microsoft.Dynamics.NAV.GetImageResource('main.js');
 
     //Hack to fix path if you use the images folder
     // runtimeUrl = runtimeUrl.replace('runtime.js','src/addins/agenda/images/runtime.js'); 
